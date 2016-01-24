@@ -1,0 +1,25 @@
+{
+  "name": "InstrctrCr33pr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icusick/InstrctrCr33pr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icusick/InstrctrCr33pr/issues"
+  },
+  "homepage": "https://github.com/icusick/InstrctrCr33pr#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4"
+  }
+}
