@@ -2,8 +2,41 @@
 <html>
 <head>
 	<title>InstrctrCr33pr</title>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+	
 </head>
 <body>
-	<h1>Hello World</h1>
+	<h1>Welcome to InstrctrCr33pr</h1>
+	<h2 id="who">Who do you want to creep on today?</h2> 
+	<p id="sung">Sung</p> 
+	<p id="anna">Anna</p>
+	<p id="phil">Phil</p>
+
+	<script type="text/javascript" src="main.js"></script>
+	
+	<script id="sung-temp" type="x-template">
+		<p>Date: {{date}}</p>
+	  <li>Footwear: {{footwear}}</li>
+	  <li>Ascot: {{ascot}}</li>
+	  <li>Wearing the hell out it? {{outfit}}</li>
+		<script id="sung-form" type="x-template">
+			<button>New Outfit</button>
+		</script>
+	</script>
+
+	<script id="anna-temp" type="x-template">
+		<p>Date: {{date}}</p>
+		<li>Location: {{location}}</li>
+		<li>Smiling? {{smiling}}</li>
+	</script>
+
+	<script id="phil-temp" type="x-template">
+		<p>Date: {{date}}</p>
+		<li>{{details.coffee}}
+	</script>
+
+	
+
 </body>
 </html>
