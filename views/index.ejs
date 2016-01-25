@@ -16,14 +16,12 @@
 	<script type="text/javascript" src="main.js"></script>
 	
 	<script id="sung-temp" type="x-template">
-		<p>Date: {{date}}</p>
-	  <li>Footwear: {{footwear}}</li>
-	  <li>Ascot: {{ascot}}</li>
-	  <li>Wearing the hell out it? {{outfit}}</li>
-		<script id="sung-form" type="x-template">
-			<button>New Outfit</button>
-		</script>
+			{{each item}}
+			{{@key}} {{this}}
+		{{/each}}
+
 	</script>
+	<a href="/newSung">New Outfit</a>
 
 	<script id="anna-temp" type="x-template">
 		<p>Date: {{date}}</p>
@@ -31,11 +29,12 @@
 		<li>Smiling? {{smiling}}</li>
 	</script>
 
-	<script id="phil-temp" type="x-template">
-		<p>Date: {{date}}</p>
-		<li>{{details.coffee}}
-	</script>
 
+	<script id="phil-temp" type="x-template">
+		<a href="/updatePhil/{{id}}"> {{date}}</a>
+		<li>{{coffee}}
+	</script>
+	<a href="/newPhil/">Coffee</a>
 	
 
 </body>

@@ -79,5 +79,14 @@ $(document).ready(function() {
 		}).done(renderPhil)
 	})
 
+	$('#button').on('click', function() {
+		$.ajax({
+			url: '/phil', 
+			type: 'POST', 
+			dataType: ''
+		}).done(function(response) {
+			console.log(response)
+		})
+	})
 
 });

@@ -44,6 +44,41 @@ app.get('/phil', function(req, res){
 	})
 })
 
+app.get('/newSung', function(req, res){
+	res.render('sung')
+})
+
+app.post('/sung', function(req, res){
+	db.collection('sung').insert({
+		date: req.body.date,
+		footwear: req.body.footwear,
+		ascot: req.body.ascot,
+		outfit: req.body.outfit
+	}, function(err, result) {
+		res.redirect('/');
+	});
+})
+
+app.get('/newPhil', function(req, res) {
+	res.render('phil')
+})
+
+
+
+app.get('/updatePhil/:id', function(req, res) {
+	console.log(req.body)
+	res.render('updatePhil', {date: req.body.date, coffee: req.body.coffee})
+})
+
+app.post('/phil', function(req, res) {
+	console.log(req.body.coffee)
+	db.collection('phil').update(
+		{date: req.body.date},
+		{$set: {coffee: req.body.coffee}}, 
+		function(err, result) {
+			res.redirect('/');
+		})
+})
 
 
 

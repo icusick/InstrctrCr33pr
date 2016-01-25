@@ -1,18 +1,16 @@
 [
 	{
 		"date": "2016-05-11", 
-		"details": {
-			"coffee": "yes", 
-			"danskos": "yes", 
-			"jaunty": "very" 
-		}
+		"coffee": "12", 
+		"danskos": "yes", 
+		"jaunty": "very" 
+		
 	}, 
 	{
 		"date": "2016-05-12", 
-		"details": {
-			"coffee": "yes", 
-			"danskos": "yes", 
-			"jaunty": "yes" 
-		}
+		"coffee": "10", 
+		"danskos": "yes", 
+		"jaunty": "yes" 
+		
 	}
 ]
