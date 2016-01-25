@@ -13,13 +13,13 @@
 	<p id="anna">Anna</p>
 	<p id="phil">Phil</p>
 
-	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
 	
 	<script id="sung-temp" type="x-template">
-			{{each item}}
-			{{@key}} {{this}}
-		{{/each}}
-
+		<p>Date: {{date}}</p>
+	  <li>Footwear: {{footwear}}</li>
+	  <li>Ascot: {{ascot}}</li>
+	  <li>Wearing the hell out it? {{outfit}}</li>
 	</script>
 	<a href="/newSung">New Outfit</a>
 
@@ -31,7 +31,7 @@
 
 
 	<script id="phil-temp" type="x-template">
-		<a href="/updatePhil/{{id}}"> {{date}}</a>
+		<a href="/updatePhil/{{_id}}"> {{date}}</a>
 		<li>{{coffee}}
 	</script>
 	<a href="/newPhil/">Coffee</a>

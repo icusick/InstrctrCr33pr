@@ -45,7 +45,7 @@ app.get('/phil', function(req, res){
 })
 
 app.get('/newSung', function(req, res){
-	res.render('sung')
+
 })
 
 app.post('/sung', function(req, res){
@@ -63,17 +63,30 @@ app.get('/newPhil', function(req, res) {
 	res.render('phil')
 })
 
+app.post('/newPhil', function(req, res) {
+	db.collection('phil').insert({
+		date: req.body.date,
+		coffee: req.body.coffee
+	}, function(err, result) {
+		res.redirect('/');
+	});
+})
 
 
 app.get('/updatePhil/:id', function(req, res) {
-	console.log(req.body)
-	res.render('updatePhil', {date: req.body.date, coffee: req.body.coffee})
+	console.log(req.params)
+	db.collection('phil').findOne({_id: ObjectId(req.params.id)}, function(err, results){
+    console.log(results)
+    res.render('updatePhil', {phil: results})
+  });
 })
 
-app.post('/phil', function(req, res) {
-	console.log(req.body.coffee)
+
+
+app.post('/phil/:id', function(req, res) {
+	console.log(req.body)
 	db.collection('phil').update(
-		{date: req.body.date},
+		{_id: ObjectId(req.params.id)},
 		{$set: {coffee: req.body.coffee}}, 
 		function(err, result) {
 			res.redirect('/');
