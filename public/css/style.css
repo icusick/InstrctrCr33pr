@@ -1,6 +1,7 @@
 #sungDiv {
 	background: url(/images/sung.jpg);
-	height: 2000px;
+	height: 200vh;
+	background-size: cover;
 }
 
 #annaDiv {
