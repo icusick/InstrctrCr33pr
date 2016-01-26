@@ -1,10 +1,9 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 <link rel="stylesheet" href="/css/style.css">
-<div id="philDiv">
-	<form method="POST" action="/newPhil">
-		<input type="text" name="date" placeholder="YYYY-MM-DD">
-		<input type="text" name="coffee" placeholder="coffee">
+<div id="annaDiv">
+	<form method="POST" action="/anna/<%= anna._id %>">
+		<input type="text" name="smiling" value="<%= anna.smiling %>" >
 		<input type="submit" value="Submit">
 	</form>
 </div>

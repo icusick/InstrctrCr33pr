@@ -45,7 +45,7 @@ app.get('/phil', function(req, res){
 })
 
 app.get('/newSung', function(req, res){
-
+	res.render('sung')
 })
 
 app.post('/sung', function(req, res){
@@ -58,6 +58,55 @@ app.post('/sung', function(req, res){
 		res.redirect('/');
 	});
 })
+
+app.get('/updateSung/:id', function(req, res) {
+	console.log(req.params)
+	db.collection('sung').findOne({_id: ObjectId(req.params.id)}, function(err, results){
+    console.log(results)
+    res.render('updateSung', {sung: results})
+  });
+})
+
+app.post('/sung/:id', function(req, res){
+	db.collection('sung').update(
+		{_id: ObjectId(req.params.id)}, 
+		{$set: {footwear: req.body.footwear, ascot: req.body.ascot, outfit: req.body.outfit}}, 
+		function(err, result) {
+			res.redirect('/')
+		})
+})
+
+app.get('/newAnna', function(req, res) {
+	res.render('anna')
+})
+
+app.post('/newAnna', function(req, res) {
+	db.collection('anna').insert({
+		date: req.body.date,
+		smiling: req.body.smiling
+	}, function(err, result) {
+		res.redirect('/');
+	});
+})
+
+app.get('/updateAnna/:id', function(req, res) {
+	console.log(req.params)
+	db.collection('anna').findOne({_id: ObjectId(req.params.id)}, function(err, results){
+    console.log(results)
+    res.render('updateAnna', {anna: results})
+  });
+})
+
+app.post('/anna/:id', function(req, res){
+	db.collection('anna').update(
+		{_id: ObjectId(req.params.id)}, 
+		{$set: {smiling: req.body.smiling,}}, 
+		function(err, result) {
+			res.redirect('/')
+		})
+})
+
+
 
 app.get('/newPhil', function(req, res) {
 	res.render('phil')

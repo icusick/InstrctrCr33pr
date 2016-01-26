@@ -1,16 +1,14 @@
-[
-	{
-		"date": "2016-05-11", 
-		"location": "GA", 
-		"smiling": "true", 
-		"making people feel good": "true", 
-		"looking pretty": "yes!"
-	}, 
-	{
-		"date": "2016-05-12",
-		"location": "GA",
-		"smiling": "true",
-		"making people feel good": "true",
-		"looking pretty": "yes!"
-	}
-]
+{
+	"date": "2016-05-11", 
+	"location": "GA", 
+	"smiling": "true", 
+	"making people feel good": "true", 
+	"looking pretty": "yes!"
+} 
+{
+	"date": "2016-05-12",
+	"location": "GA",
+	"smiling": "true",
+	"making people feel good": "true",
+	"looking pretty": "yes!"
+}

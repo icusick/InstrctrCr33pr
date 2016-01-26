@@ -1,9 +1,9 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
-
-<form method="POST" action="/phil/<%= phil._id %>">
-
-	<input type="text" name="coffee" value="<%= phil.coffee %>" >
-	<input type="submit" value="Submit">
-</form>
-
+<link rel="stylesheet" href="/css/style.css">
+<div id="philDiv">
+	<form method="POST" action="/phil/<%= phil._id %>">
+		<input type="text" name="coffee" value="<%= phil.coffee %>" >
+		<input type="submit" value="Submit">
+	</form>
+</div>

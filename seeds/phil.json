@@ -1,16 +1,15 @@
-[
-	{
-		"date": "2016-05-11", 
-		"coffee": "12", 
-		"danskos": "yes", 
-		"jaunty": "very" 
-		
-	}, 
-	{
-		"date": "2016-05-12", 
-		"coffee": "10", 
-		"danskos": "yes", 
-		"jaunty": "yes" 
-		
-	}
-]
+
+{
+	"date": "2016-05-11", 
+	"coffee": "12", 
+	"danskos": "yes", 
+	"jaunty": "very" 
+	
+} 
+{
+	"date": "2016-05-12", 
+	"coffee": "10", 
+	"danskos": "yes", 
+	"jaunty": "yes" 
+	
+}

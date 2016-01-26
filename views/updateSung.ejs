@@ -1,0 +1,13 @@
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<div id="sungDiv">
+	<div id="form">
+		<form method="POST" action="/sung/<%= sung._id %>">
+			<input type="text" name="footwear" value="<%= sung.footwear %>">
+			<input type="text" name="ascot" value="<%= sung.ascot %>">
+			<input type="text" name="outfit" value="<%= sung.outfit %>">
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</div>
